@@ -12,7 +12,7 @@ public class mainProva {
 		ClienteRegister neo = new ClienteRegister();
 		
 		//neo.createTable();
-		neo.regCliente();
+		neo.regCliente(client);
 	}
 
 }

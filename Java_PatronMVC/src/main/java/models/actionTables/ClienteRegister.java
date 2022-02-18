@@ -12,14 +12,18 @@ public class ClienteRegister {
 
 	private Conect conn;
 	
-	Cliente client;
+	//Cliente client;
 	
 	// MÉTODO REGISTRO CLIENTE
 	
-	public void regCliente() {
+	public void regCliente(Cliente client) {
 		conn = new Conect();
 		
 		try {
+			String queryDB = "USE CLIENTES; ";
+			Statement stDb = conn.getConnection().createStatement();
+			stDb.executeUpdate(queryDB);
+			
 			Statement st = conn.getConnection().createStatement();
 			String sql = "INSERT INTO CLIENTES (nombre, apellido, direccion, dni, fecha) VALUES ('" +  client.getName() + "', '" + client.getLastname() + "', '" + client.getAddress() + "', '" + client.getDni() + "', '" + client.getDate() + "') ;";
 			st.executeUpdate(sql);
@@ -38,7 +42,8 @@ public class ClienteRegister {
 			Statement stDb = conn.getConnection().createStatement();
 			stDb.executeUpdate(queryDB);
 			
-			String queryTab = "CREATE TABLE CLIENTES (id int (11) NOT NULL AUTO_INCREMENT PRIMARY KEY, nombre nvarchar (250), apellido nvarchar (250), direccion nvarchar (250), dni varchar(11) DEFAULT NULL, fecha date DEFAULT NULL );";
+			String queryTab = "CREATE TABLE CLIENTES (id int (11) NOT NULL AUTO_INCREMENT PRIMARY KEY, nombre nvarchar (250), apellido nvarchar (250), direccion nvarchar (250), dni int(11) DEFAULT NULL, fecha date DEFAULT NULL );";
+			
 			Statement st = conn.getConnection().createStatement();
 			st.executeUpdate(queryTab);
 			System.out.println("Corrected");
