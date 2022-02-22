@@ -1,4 +1,4 @@
-package models.clases;
+package models.dto;
 
 import java.sql.Date;
 
@@ -12,14 +12,16 @@ public class Cliente {
 	private String date;
 	
 	///SOLO PARA PRUEBA
-	public Cliente(String name, String lastname, String address, String dni, String date) {
+	/*public Cliente(String name, String lastname, String address, String dni, String date) {
 		super();
 		this.name = name;
 		this.lastname = lastname;
 		this.address = address;
 		this.dni = dni;
 		this.date = date;
-	}
+	}*/
+	
+	//EL ID ES AUTOINCREMENTAL
 	/*public int getId() {
 		return id;
 	}

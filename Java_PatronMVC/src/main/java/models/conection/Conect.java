@@ -10,7 +10,7 @@ public class Conect {
 	static String dataB = "CLIENTES";
 	static String log = "remote";
 	static String pass = "Taquito20.";
-	static String url = "jdbc:mysql://192.168.1.164:3306?useTimezone=true&serverTimezone=UTC";
+	static String url = "jdbc:mysql://192.168.1.168:3306?useTimezone=true&serverTimezone=UTC";
 	
 	private Connection conect = null;
 	
