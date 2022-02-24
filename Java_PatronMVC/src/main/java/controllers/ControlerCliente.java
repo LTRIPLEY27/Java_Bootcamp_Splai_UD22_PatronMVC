@@ -1,6 +1,5 @@
 package controllers;
 
-import models.*;
 import models.dao.ClienteRegister;
 import models.dto.Cliente;
 import models.services.ServiceCliente;

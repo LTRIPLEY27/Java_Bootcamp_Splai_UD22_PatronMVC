@@ -23,17 +23,5 @@ public class App
 			}
 		});
 		
-		/*Cliente client = new Cliente();
-		client.setName("Ada");
-		client.setLastname("Lovelace");
-		client.setAddress("reus 123");
-		client.setDni("123D");
-		client.setDate("1789-04-12");
-		Conect con = new Conect();
-		//con.crearDataBase();
-		ClienteRegister neo = new ClienteRegister();
-		
-		//neo.createTable();
-		neo.regCliente(client);*/
 	}
 }
